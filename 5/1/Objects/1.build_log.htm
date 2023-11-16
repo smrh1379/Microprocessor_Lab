@@ -1,0 +1,137 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.37.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: qwer hsi, asd, LIC=4ZLZX-HE4DI-GQ20H-W575A-NQ064-4Z0S2
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.37.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.18
+Assembler:       Armasm.exe V6.18
+Linker/Locator:  ArmLink.exe V6.18
+Library Manager: ArmAr.exe V6.18
+Hex Converter:   FromElf.exe V6.18
+CPU DLL:         SARMCM3.DLL V5.37.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
+Dialog DLL:      TCM.DLL V1.56.1.0
+ 
+<h2>Project:</h2>
+D:\sbu\4011\microprocessor lab\5\1\1.uvprojx
+Project File Date:  11/28/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.18', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+compiling system_stm32f4xx.c...
+assembling startup_stm32f401xe.s...
+main.c(13): warning: signed shift result (0xFFFF0000) sets the sign bit of the shift expression's type ('int') and becomes negative [-Wshift-sign-overflow]
+                GPIOA->BSRR = 0XFFFF<<16;
+                              ~~~~~~^ ~~
+main.c(13): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+                GPIOA->BSRR = 0XFFFF<<16;
+                            ~ ~~~~~~^~~~
+main.c(23): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+         GPIOA->ODR =0b0111111;
+                     ^
+main.c(28): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+         GPIOA->ODR =0b0000110;
+                     ^
+main.c(32): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+         GPIOA->ODR =0b1011011;
+                     ^
+main.c(36): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+         GPIOA->ODR =0b1001111;
+                     ^
+main.c(40): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+         GPIOA->ODR =0b1100110;
+                     ^
+main.c(44): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+         GPIOA->ODR =0b1101101;
+                     ^
+main.c(48): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+         GPIOA->ODR =0b1111101;
+                     ^
+main.c(52): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+         GPIOA->ODR =0b0000111;
+                     ^
+main.c(56): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+         GPIOA->ODR =0b1111111;
+                     ^
+main.c(60): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+         GPIOA->ODR =0b1101111;
+                     ^
+main.c(62): warning: // comments are not allowed in this language [-Wcomment]
+                 //hex only 
+                 ^
+main.c(64): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+         GPIOA->ODR =0b1110111;  //A
+                     ^
+main.c(67): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+         GPIOA->ODR =0b1111100;  //b
+                     ^
+main.c(70): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+         GPIOA->ODR =0b0111001;  //C
+                     ^
+main.c(73): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+         GPIOA->ODR =0b1011110;  //d
+                     ^
+main.c(76): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+         GPIOA->ODR =0b1111001;  //E
+                     ^
+main.c(79): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+         GPIOA->ODR =0b1110001;  //F
+                     ^
+main.c(82): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+                                         GPIOA->BSRR =0b0111111;
+                                                      ^
+main.c(12): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+                uint32_t  i = 0;
+                          ^
+main.c(94): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+22 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=740 RO-data=420 RW-data=0 ZI-data=1632  
+FromELF: creating hex file...
+".\Objects\1.axf" - 0 Error(s), 22 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.16.0.pack
+                Keil.STM32F4xx_DFP.2.16.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Target_1
+  C:/Users/smrh1/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/smrh1/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:Startup:2.6.3
+      Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
+      Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+      Source file:   MDK/Device/Source/ARM/STM32F401xx_OPT.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f401xe.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
+Build Time Elapsed:  00:00:00
+</pre>
+</body>
+</html>

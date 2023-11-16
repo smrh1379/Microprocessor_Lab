@@ -1,0 +1,28 @@
+--cpu=Cortex-M4.fp.sp
+"clocktrigger\startup_stm32f401xe.o"
+"clocktrigger\main.o"
+"clocktrigger\stm32f4xx_it.o"
+"clocktrigger\stm32f4xx_hal_msp.o"
+"clocktrigger\stm32f4xx_hal_adc.o"
+"clocktrigger\stm32f4xx_hal_adc_ex.o"
+"clocktrigger\stm32f4xx_ll_adc.o"
+"clocktrigger\stm32f4xx_hal_rcc.o"
+"clocktrigger\stm32f4xx_hal_rcc_ex.o"
+"clocktrigger\stm32f4xx_hal_flash.o"
+"clocktrigger\stm32f4xx_hal_flash_ex.o"
+"clocktrigger\stm32f4xx_hal_flash_ramfunc.o"
+"clocktrigger\stm32f4xx_hal_gpio.o"
+"clocktrigger\stm32f4xx_hal_dma_ex.o"
+"clocktrigger\stm32f4xx_hal_dma.o"
+"clocktrigger\stm32f4xx_hal_pwr.o"
+"clocktrigger\stm32f4xx_hal_pwr_ex.o"
+"clocktrigger\stm32f4xx_hal_cortex.o"
+"clocktrigger\stm32f4xx_hal.o"
+"clocktrigger\stm32f4xx_hal_exti.o"
+"clocktrigger\stm32f4xx_hal_tim.o"
+"clocktrigger\stm32f4xx_hal_tim_ex.o"
+"clocktrigger\system_stm32f4xx.o"
+--strict --scatter "clocktrigger\clocktrigger.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "clocktrigger.map" -o clocktrigger\clocktrigger.axf

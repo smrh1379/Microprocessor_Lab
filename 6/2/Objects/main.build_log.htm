@@ -1,0 +1,163 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.37.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: qwer hsi, asd, LIC=4ZLZX-HE4DI-GQ20H-W575A-NQ064-4Z0S2
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.37.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.18
+Assembler:       Armasm.exe V6.18
+Linker/Locator:  ArmLink.exe V6.18
+Library Manager: ArmAr.exe V6.18
+Hex Converter:   FromElf.exe V6.18
+CPU DLL:         SARMCM3.DLL V5.37.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      UL2CM3.DLL V1.164.7.0
+Dialog DLL:      TCM.DLL V1.56.1.0
+ 
+<h2>Project:</h2>
+D:\sbu\4011\microprocessor lab\6\2\main.uvprojx
+Project File Date:  12/12/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.18', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+main.c(17): warning: no previous extern declaration for non-static variable 'i' [-Wmissing-variable-declarations]
+uint32_t i=0;
+         ^
+main.c(17): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint32_t i=0;
+^
+main.c(18): warning: no previous extern declaration for non-static variable 'clicked' [-Wmissing-variable-declarations]
+int clicked=0;
+    ^
+main.c(18): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int clicked=0;
+^
+main.c(19): warning: no previous prototype for function 'LCD_clear' [-Wmissing-prototypes]
+void LCD_clear(){
+     ^
+main.c(19): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void LCD_clear(){
+^
+static 
+main.c(19): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void LCD_clear(){
+              ^
+main.c(29): warning: // comments are not allowed in this language [-Wcomment]
+//TIM2Config();
+^
+main.c(68): warning: no previous prototype for function 'EXTI0_IRQHandler' [-Wmissing-prototypes]
+void EXTI0_IRQHandler(void) {
+     ^
+main.c(68): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void EXTI0_IRQHandler(void) {
+^
+static 
+main.c(89): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+        for (int t = 0; t < count; t++){
+             ^
+main.c(89): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+main.c(81): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+        uint32_t j=i;
+                 ^
+main.c(134): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    GPIOB->ODR &= ~(1<<6)  ;                         /* RS = 0, R/W = 0 */
+               ~~ ^~~~~~~
+main.c(135): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+          GPIOB->ODR &= ~(1<<5)  ;
+                     ~~ ^~~~~~~
+main.c(141): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    GPIOB->ODR &= ~(1<<7);                             /* clear EN */
+               ~~ ^~~~~~~
+main.c(155): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    GPIOB->ODR &= ~(1<<6)  ;                    /* R/W = 0 */
+               ~~ ^~~~~~~
+main.c(160): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    GPIOB->ODR &= ~(1<<7);                   /* clear EN */
+               ~~ ^~~~~~~
+main.c(162): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+                        GPIOC->ODR = low4<<4  ;                 /* put data on data bus */
+                                   ~ ~~~~^~~
+main.c(165): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    GPIOB->ODR &= ~(1<<7);                   /* clear EN */
+               ~~ ^~~~~~~
+main.c(171): warning: implicit conversion changes signedness: 'uint32_t' (aka 'unsigned int') to 'int' [-Wsign-conversion]
+    int m = N;
+        ~   ^
+main.c(179): warning: variable length arrays are a C99 feature [-Wvla-extension]
+    char arr1[digit];
+              ^~~~~
+main.c(180): warning: implicitly declaring library function 'malloc' with type 'void *(unsigned int)' [-Wimplicit-function-declaration]
+    arr = (char*)malloc(digit);
+                 ^
+main.c(180): note: include the header <stdlib.h> or explicitly provide a declaration for 'malloc'
+main.c(180): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    arr = (char*)malloc(digit);
+                 ~~~~~~ ^~~~~
+main.c(187): warning: declaration shadows a variable in the global scope [-Wshadow]
+    int i;
+        ^
+main.c(17): note: previous declaration is here
+uint32_t i=0;
+         ^
+main.c(178): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+    char* arr;
+          ^
+main.c(197): warning: declaration shadows a variable in the global scope [-Wshadow]
+    int i;
+        ^
+main.c(17): note: previous declaration is here
+uint32_t i=0;
+         ^
+main.c(200): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+main.c(196): warning: unused variable 'j' [-Wunused-variable]
+                int j;
+                    ^
+25 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=2404 RO-data=420 RW-data=0 ZI-data=1640  
+FromELF: creating hex file...
+".\Objects\main.axf" - 0 Error(s), 25 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.16.0.pack
+                Keil.STM32F4xx_DFP.2.16.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Target_1
+  C:/Users/smrh1/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/smrh1/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:Startup:2.6.3
+      Source file:   MDK/Device/Source/ARM/STM32F401xx_OPT.s
+      Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
+      Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f401xe.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
